@@ -15,7 +15,7 @@ module.exports = {
       const response = await postInstance.save()
       const postedByUser = await UserModel.findOneAndUpdate({ user }, { $push: {posts: response._id}})
     
-      res.send({...response, user: postedByUser})
+      res.send({...response._doc, user: postedByUser})
     } catch (e) {
       console.error(e)
       res.status(500).send( {error: true })

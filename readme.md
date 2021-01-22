@@ -3,3 +3,5 @@
 3- yarn add dotenv
 4- yarn add mongoose
 5- yarn add nodemon
+6- yarn bcrypt jsonwebtoken
+7- yarn add moment
