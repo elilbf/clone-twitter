@@ -1,7 +1,15 @@
-1- yarn init -y (primeiro passo, criando o package.json)
-2- yarn add express (adicionando a dependencia do express no projeto)
-3- yarn add dotenv
-4- yarn add mongoose
-5- yarn add nodemon
-6- yarn bcrypt jsonwebtoken
-7- yarn add moment
+Anotações importantes que foram realizadas durante a construção do projeto.
+
+### 1- Adicionando as dependencias do projeto
+
+- yarn init -y (primeiro passo, criando o package.json)
+- yarn add express (adicionando a dependencia do express no projeto)
+- yarn add dotenv
+- yarn add mongoose
+- yarn add nodemon
+- yarn bcrypt jsonwebtoken
+- yarn add moment
+
+### 2- Inicializando a aplicação
+
+- yarn start
