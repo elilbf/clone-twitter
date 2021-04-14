@@ -12,5 +12,9 @@ module.exports = {
     const postedByUser = await UserModel.findOneAndUpdate({ user }, { $push: {posts: response._id}})
 
     return {...response._doc, user: postedByUser}
+  },
+  async like(idPost, idUser){
+    console.log(idPost, idUser)
+    return PostsModel.findByIdAndUpdate(idPost, { $push: { likes: idUser } })
   }
 }
