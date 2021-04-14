@@ -1,6 +1,6 @@
 const express = require("express")
 const mongoConnector = require("./mongoose-connector")
-const { create: createPosts } = require('./src/controllers/posts.controllers')
+const { create: createPosts, like } = require('./src/controllers/posts.controllers')
 const { create: createUser, profile, login } = require('./src/controllers/user.controller')
 const HandleHttpError = require('./src/middlewares/handle-http-error')
 const AuthMiddleware = require('./src/middlewares/auth-middleware')
@@ -24,6 +24,7 @@ app.post("/posts", createPosts)
 app.post('/users', createUser)
 app.post('/login', login)
 app.get('/profile/:user', profile)
+app.post('/posts/:id/like', like)
 
 
 app.listen(HTTP_PORT, () => {
